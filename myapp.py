@@ -161,7 +161,7 @@ for i in tqdm(range(200,len(data))):
                     signal.append(-1)
                     entry=data1["Close"].values[-1]
                     entry_date=data1["Date"].values[-1]
-                    sl1b= (data1.Low.values[-3:,]).min()
+                    sl1b= -999999
                     stop1.append(sl1b)
                     sl2b= entry - abs(current_pat[1] - current_pat[4])*0.3
                     stop2.append(sl2b)
@@ -186,7 +186,7 @@ for i in tqdm(range(200,len(data))):
                     signal.append(-1)
                     entry=data1["Close"].values[-1]
                     entry_date=data1["Date"].values[-1]
-                    sl1s= (data1.High.values[-4:,]).max()
+                    sl1s= 999999999999
                     sl2s= abs(current_pat[1] - current_pat[4])*0.3 + entry 
                     t1s= current_pat[3]
                     stop1.append(sl1s)
