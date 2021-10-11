@@ -209,8 +209,8 @@ for i in tqdm(range(200,len(data))):
                     if profit > 0:
                         correct_pats+=1
                     plt.style.use('ggplot') 
-                    a_point=current_idx[0]-30
-                    b_point= current_idx[-1]+50
+                    a_point=current_idx[0]-50
+                    b_point= current_idx[-1]+100
                     exit_date= data1["Date"].values[-1]
                     exit_price= data1["Close"].values[-1]
                     
@@ -273,8 +273,8 @@ for i in tqdm(range(200,len(data))):
                         if profit > 0:
                             correct_pats+=1
                         plt.style.use('ggplot') 
-                        a_point=current_idx[0]-30
-                        b_point= current_idx[-1]+50
+                        a_point=current_idx[0]-50
+                        b_point= current_idx[-1]+100
                         
                         df=data.iloc[a_point:b_point,]    
                         df = df[['Date', 'Open', 'High',   'Low', 'Close']]
